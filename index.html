@@ -1,47 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Secure Login CRUD</title>
-  <link rel="stylesheet" href="style.css">
+<title>CRUD User Management</title>
 </head>
 <body>
-
-<!-- LOGIN -->
-<div id="loginBox" class="login-box">
-  <h2>🚀 Secure Login</h2>
-
-  <input type="text" id="loginUser" placeholder="Username">
-  <input type="password" id="loginPass" placeholder="Password">
-
-  <label class="show">
-    <input type="checkbox" onclick="togglePassword()"> Show Password
-  </label>
-
-  <button onclick="login()">Login</button>
-
-  <p id="msg" class="error"></p>
-</div>
-
-<!-- USER MANAGEMENT -->
-<div id="crudBox" style="display:none;">
-  <h1>User Management (CRUD)</h1>
-
-  Username:
-  <input type="text" id="username">
-  Role:
-  <input type="text" id="role">
-  <button onclick="addUser()">Add User</button>
-
-  <h2>Users List</h2>
-  <table border="1" id="userTable">
-    <tr>
-      <th>Username</th>
-      <th>Role</th>
-      <th>Action</th>
-    </tr>
-  </table>
-</div>
-
+<h2>User Management (CRUD)</h2>
+Username:
+<input type="text" id="username">
+Role:
+<input type="text" id="role">
+<button onclick="addUser()">Add User</button>
+<h3>Users List</h3>
+<ul id="userList"></ul>
 <script src="script.js"></script>
 </body>
 </html>
