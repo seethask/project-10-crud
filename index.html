@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Management</title>
-  
+  <title>Secure Login CRUD</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- LOGIN -->
-<div id="loginBox">
-  <h2>Login</h2>
-  Username: <input type="text" id="loginUser"><br><br>
-  Password: <input type="password" id="loginPass"><br><br>
+<div id="loginBox" class="login-box">
+  <h2>🚀 Secure Login</h2>
+
+  <input type="text" id="loginUser" placeholder="Username">
+  <input type="password" id="loginPass" placeholder="Password">
+
+  <label class="show">
+    <input type="checkbox" onclick="togglePassword()"> Show Password
+  </label>
+
   <button onclick="login()">Login</button>
-  <p id="msg"></p>
+
+  <p id="msg" class="error"></p>
 </div>
 
 <!-- USER MANAGEMENT -->
@@ -38,4 +45,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
