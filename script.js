@@ -1,17 +1,24 @@
 const API =
 "https://script.google.com/macros/s/AKfycbwGNCV1cwBMzSJdjo8wQ861WqTM2JJp2a9yiGJ6A7l4jQosQtjTF5HFEnaCGqxWiBS0/exec";
 
+/* SHOW PASSWORD */
+function togglePassword() {
+  const pass = document.getElementById("loginPass");
+  pass.type = pass.type === "password" ? "text" : "password";
+}
+
 /* LOGIN */
 function login() {
-  if (
-    document.getElementById("loginUser").value === "admin" &&
-    document.getElementById("loginPass").value === "admin123"
-  ) {
+  const user = document.getElementById("loginUser").value;
+  const pass = document.getElementById("loginPass").value;
+  const msg = document.getElementById("msg");
+
+  if (user === "admin" && pass === "admin123") {
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("crudBox").style.display = "block";
     loadUsers();
   } else {
-    document.getElementById("msg").innerText = "Invalid Login";
+    msg.innerText = "❌ Invalid credentials";
   }
 }
 
