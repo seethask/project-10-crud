@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Management</title>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <h2>Login</h2>
+  Username: <input type="text" id="loginUser"><br><br>
+  Password: <input type="password" id="loginPass"><br><br>
+  <button onclick="login()">Login</button>
+  <p id="msg"></p>
+</div>
+
+<!-- USER MANAGEMENT -->
+<div id="crudBox" style="display:none;">
+  <h1>User Management (CRUD)</h1>
+
+  Username:
+  <input type="text" id="username">
+  Role:
+  <input type="text" id="role">
+  <button onclick="addUser()">Add User</button>
+
+  <h2>Users List</h2>
+  <table border="1" id="userTable">
+    <tr>
+      <th>Username</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
